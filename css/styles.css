@@ -6,7 +6,7 @@
 }
 
 @font-face {
-  font-family: 'Caudex';
+  font-family: Caudex;
   src: url('../css/Fonts/Caudex-Regular.ttf') format('truetype');
   /* Add more formats if needed */
 }
