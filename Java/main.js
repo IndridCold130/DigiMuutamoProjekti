@@ -16,19 +16,19 @@ class topnavbar extends HTMLElement {
    </style>
         <div id="navbar", class="navbar">
         <ul>
-            <li><a href="index.html" onmouseover="playSound()">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li class="dropdown">
-                <a href="#Game" onmouseover="playSound()">Game</a>
+                <a href="#Game">Game</a>
                 <div class="dropdown-content">
                     <a href="#">World</a>
                     <a href="#">Races</a>
                     <a href="#">Classes</a>
                 </div>
             </li>
-            <li><a href="blog.html" onmouseover="playSound()">Developer Blog</a></li>
-            <li><a href="gallery.html" onmouseover="playSound()">Gallery</a></li>
-            <li><a href="FAQ.html" onmouseover="playSound()">FAQ</a></li>
-            <li><a href="https://discord.gg/aSRmykTp" target="_blank" onmouseover="playSound()">Discord</a></li>
+            <li><a href="blog.html">Developer Blog</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+            <li><a href="https://discord.gg/aSRmykTp" target="_blank">Discord</a></li>
         </ul>
       </div>
       `;
