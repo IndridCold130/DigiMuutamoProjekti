@@ -1,27 +1,60 @@
 :root {
     --default-margin: 30px;
+    --theme-border-color:#d5d5d5;
+    --theme-background-color:#000000ce;
+    --webkit-font-smoothing: antialiased;
+}
+
+@font-face {
+  font-family: 'Caudex';
+  src: url('Fonts/Caudex-Regular.ttf') format('truetype');
+  /* Add more formats if needed */
 }
 
 body {
-    overflow-x: hidden;
-    background-color: #000000;
-    color: #f0eaeae8;
-    font-family: AdelonBook,Times New Roman,Times,serif;
+  max-width: 100%; /* Adjust this value as needed */
+  margin: 0;
+  background-image: url('Design/Conspiracy.jpg');
+  background-size: cover;
+  overflow-y: scroll;
+  height: 150vh;
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
+main {
+  max-width: 100%; /* Adjust this value as needed */
+  padding: 0;
+  flex: 1; /* Make main content area take remaining vertical space */
+}
+
+/* Style the footer */
+footer {
+  border-top: 1px solid var(--theme-border-color);
+  position: static;
+  background-color: #000000ed;
+  padding: 10px;
+  text-align: center;
+  color: rgb(201, 201, 191);
+  font-family: 'Caudex', serif;
+  font-size: 16px;
+}
+
 .maintext {
-    font-family: AdelonBook,Times New Roman,Times,serif;
-    color:rgb(230, 230, 199);
-    font-size: 42px;
+  font-family: 'Caudex', serif;
+  color:rgb(210, 209, 198);
+  font-size: 45px;
 }
 
 .menutext {
-    font-family: AdelonBook,Times New Roman,Times,serif;
+  font-family: 'Caudex', sans-serif;
     color:rgb(219, 219, 176);
     font-size: 42px;
 }
 
 .navbar {
-    margin-top: 20px; /* add an offset at the top
+    margin-top: 15px; /* add an offset at the top
     position: fixed; /* Set navbar to fixed position */
     top: 0; /* Stick it to the top of the viewport */
     background-color: #0000009c; /* Background color of the navbar */
@@ -46,9 +79,9 @@ body {
 .navbar a {
     text-decoration: none;
     color: #fff;
-    font-weight: bold;
-    font-family: AdelonBook,Times New Roman,Times,serif;
-    font-size: 21px;
+    font-weight: 400;
+    font-family: 'Caudex', sans-serif;
+    font-size: 22px;
     display: block;
       color: white;
       text-align: center;
@@ -74,13 +107,21 @@ body {
     padding-top: 60px; /* Adjust as needed based on your navbar height */
 }
 
+.wrapper-box{
+  background-color: var(--theme-background-color);
+  border: 1px solid var(--theme-border-color);
+  border-radius: 3px;
+  font-size: 100%;
+  margin: 24px auto 24px 0;
+  padding: 20px, 20px;
+}
+
 /* Styles for the dropdown */
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #333;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
 }
 
 .dropdown-content a {
@@ -93,3 +134,71 @@ body {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+.gallery-container {
+  box-sizing: border-box;
+  display: grid;
+  grid-auto-flow: column;
+  transform: scale(60%);
+  padding: 5px 100px;
+  transform-origin: top left;
+  gap: 15px; /* Adjust the gap between the items as needed */
+}
+
+.gallery-scrollbox {
+    overflow-y: scroll;
+    width: 500px; /* Set the desired width*/
+    align-self: start;
+    padding: 5px 5px;
+    margin-left: 1.5%;
+    direction: rtl;
+    position: relative; /* or static, depending on your layout */
+    /*border: 3px solid #000000;*/
+  }
+
+  .gallery-item {
+    margin-bottom: 3px; /* Adjust the spacing between images */
+  }
+  .gallery-img {
+    opacity: 1;
+    width: 100%; /* Set the desired width*/
+    height: 100%; /* Set the desired height*/
+    cursor: pointer;
+  }
+
+  .gallery-img:hover {
+    opacity: 1.0;
+    background-color:#ff0000;
+    transition: opacity 0.3s ease;
+  }
+    /* Closable button inside the image */
+  .gallery-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+  }
+
+  .gallery-display {
+    display: block;
+    transform-origin: top left;
+   /* margin: 0 auto; /* Center the image horizontally */
+  }
+
+  .quote-opaque {
+    font-family: 'Caudex', serif;
+    display: flex; /* Use flexbox */
+    flex: 8; /* Make main content area take remaining vertical space */
+    background: #000000ea;
+    border: 1px solid #777777;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    color: #fff;
+    margin: 1em auto; /* Auto margin to center horizontally */
+    width: 100%;
+    max-width: 70%;
+    padding: 0.75em 1.25em;
+}
+
