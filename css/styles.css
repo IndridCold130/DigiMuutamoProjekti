@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: 'Caudex';
-  src: url('Fonts/caudex-regular.ttf') format('truetype');
+  src: url('/css/Fonts/Caudex-Regular.ttf') format('truetype');
   /* Add more formats if needed */
 }
 
