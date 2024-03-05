@@ -112,65 +112,33 @@ class faq extends HTMLElement {
   }
   connectedCallback() {
     this.innerHTML = `
-<style>
-.faqcollapsible {
-  font-family: 'Caudex', serif;
-  color: white; /* Set the color of the text */
-  background: none;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 21px;
-  opacity: 0.5; /* Set the opacity to 50% */
-}
-
-.active, .faqcollapsible:hover {
-  opacity: 1.0;
-}
-
-.faqcontent {
-  font-family: 'Caudex', serif;
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background: none;
-}
-</style>
-</head>
-<button class="faqcollapsible">What is the game About?</button>
-<div class="faqcontent">
-  <p>This isn't working?</p>
-</div>
-
-<button class="faqcollapsible">When will the game be released?</button>
-<div class="faqcontent">
-  <p>Answer 2.</p>
-</div>
-
-<button class="faqcollapsible">What are the current goalposts?</button>
-<div class="faqcontent">
-  <p>Answer 3.</p>
-</div>
-
-<script>
-var coll = document.getElementsByClassName("faqcollapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var faqcontent = this.nextElementSibling;
-    if (faqcontent.style.display === "block") {
-      faqcontent.style.display = "none";
-    } else {
-      faqcontent.style.display = "block";
+    <title>W3.CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <body>
+    <div class="w3-container">
+    
+    <h2>Accordions</h2>
+    <p>An accordion is used to show (and hide) HTML content:</p>
+      
+    <button onclick="myFunction('Demo1')" class="w3-btn w3-block w3-black w3-left-align">Open Section 1</button>
+    <div id="Demo1" class="w3-container w3-hide">
+      <h4>Section 1</h4>
+      <p>Some text..</p>
+    </div>
+    
+    </div>
+    <script>
+    function myFunction(id) {
+      var x = document.getElementById(id);
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else { 
+        x.className = x.className.replace(" w3-show", "");
+      }
     }
-  });
-}
-</script>
+    </script>
+    </body>
 `;
     }
   }
@@ -178,3 +146,5 @@ for (i = 0; i < coll.length; i++) {
 // Define the custom element
 customElements.define('faq-component', faq);
 // FAQ logic
+
+

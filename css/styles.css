@@ -3,6 +3,11 @@
     --theme-border-color:#d5d5d5;
     --theme-background-color:#000000ce;
     --webkit-font-smoothing: antialiased;
+    --game-title: "The Heebe Jeebes";
+}
+
+p {
+  font-family: var(--game-title);
 }
 
 @font-face {
@@ -188,11 +193,14 @@ footer {
   }
 
   .quote-opaque {
+    height: 75%;
+    max-height: 300; /* Set the maximum height for the scrollable area */
+    overflow-y: auto; /* Enable vertical scrolling */
     font-family: 'Caudex', serif;
     display: flex; /* Use flexbox */
-    flex: 8; /* Make main content area take remaining vertical space */
+    flex-direction: column;
     background: #000000ea;
-    border: 1px solid #777777;
+    border: 2px solid #777777;
     -webkit-border-radius: 4px;
     border-radius: 4px;
     color: #fff;
@@ -201,4 +209,70 @@ footer {
     max-width: 70%;
     padding: 0.75em 1.25em;
 }
+
+/* FAQ ELEMENTS */
+
+.faq-btn,.faq-button{
+  font-family: 'Caudex', serif;
+  font-size: 24px;
+  border:none;
+  display:inline-block;
+  padding:8px 16px;
+  vertical-align:middle;
+  overflow:hidden;text-decoration:none;
+  color:inherit;
+  background-color:inherit;
+  text-align:center;
+  cursor:pointer;
+  white-space:nowrap
+}
+
+.faq-block{
+  display:block;
+  width:100%
+}
+
+.faq-black {
+  color: #fff!important;
+  background-color: none!important;
+}
+
+.faq-black:hover {
+  background-color: #a508085b!important;
+}
+
+  .faq-left-align{
+    text-align:justify!important
+  }
+
+  .faq-hide{display:none!important}
+
+  .faq-show-block,.faq-show{display:block!important}.w3-show-inline-block{display:inline-block!important}
+
+  .faq-container,.faq-panel{
+    padding:0.5em 52px;
+    font-size: 19px;
+    text-align: justify!important;
+  }
+  .faq-panel{
+    margin-top:16px;
+    margin-bottom:16px
+  }
+
+  /* Add this CSS to style the accordion arrow */
+  .accordion-arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent; /* Change to border-top */
+    border-bottom: 5px solid transparent; /* Change to border-bottom */
+    border-left: 5px solid #fff; /* Change to border-left */
+    margin-right: 6px; /* Adjust spacing as needed */
+    transition: transform 0.1s; /* Add transition for smooth animation */
+  }
+
+.faq-btn.active .accordion-arrow {
+  transform: rotate(90deg); /* Rotate arrow when accordion is open */
+}
+/* FAQ ELEMENTS */
 

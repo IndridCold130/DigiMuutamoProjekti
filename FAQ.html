@@ -10,10 +10,61 @@
    <main>
       <topnavbar-component></topnavbar-component>
    </main>
+   <!-- FAQ CONTENT -->
    <div class="quote-opaque">
-      <faq-component></faq-component>
+      <!-- QUESTION -->
+   <div><button onclick="myFunction('OpenFAQ')" class="faq-btn faq-block faq-black faq-left-align">What is the game about?
+      <span class="accordion-arrow"></span></button>
+<div id="OpenFAQ" class="faq-container faq-hide">
+   <p>"Game Title" is a dark adult ARPG greatly inspired by TES series and Soulslike games. You will be able to change nearly any aspect of your character from their race to how they fight and embark on a long journey while solving smaller quests on the side. The core principle of the game is player choice.</p></div></div>
+      <!-- QUESTION -->
+      <div><button onclick="myFunction('OpenFAQ4')" class="faq-btn faq-block faq-black faq-left-align">Is the game single player, co-op or online?
+         <span class="accordion-arrow"></span></button>
+         <div id="OpenFAQ4" class="faq-container faq-hide">
+            <p>The game will be single player but it has been built with multiplayer in mind from ground up so there is a possibility of online play far into the future.</p>
+            </div></div>
+               <!-- QUESTION -->
+   <div><button onclick="myFunction('OpenFAQ1')" class="faq-btn faq-block faq-black faq-left-align">When will the game be released?
+      <span class="accordion-arrow"></span></button>
+   <div id="OpenFAQ1" class="faq-container faq-hide">
+     <p>ETA of the full release cannot be provided at this time. However, the first alpha build will be followed by frequent updates roughly every 1-2 months. These updates are likely to include bug fixes, as well as new features and general polish.</p>
+     <p>The first alpha is planned to be released around August of 2024.</p></div></div>
+      <!-- QUESTION -->
+      <div><button onclick="myFunction('OpenFAQ2')" class="faq-btn faq-block faq-black faq-left-align">What features are currently planned?
+         <span class="accordion-arrow"></span></button>
+      <div id="OpenFAQ2" class="faq-container faq-hide">
+        <p>Current short term goals of the project are:</p>
+        <p>*Ranged combat</p>
+        <p>*Companions and a robust Companion System</p>
+        <p>*Male protagonist</p>
+        <p>*Polish and lots of it</p>
+      </div></div>
+         <!-- QUESTION -->
+      <div><button onclick="myFunction('OpenFAQ3')" class="faq-btn faq-block faq-black faq-left-align">How can I support the project?
+         <span class="accordion-arrow"></span></button>
+         <div id="OpenFAQ3" class="faq-container faq-hide">
+            <p>By talking about the project, playing the game and providing honest feedback on the Discord!</p>
+            </div></div>
+               <!-- QUESTION -->
+<script>
+   function myFunction(id) {
+      var x = document.getElementById(id);
+      var button = document.querySelector('[onclick="myFunction(\'' + id + '\')"]');
+      
+      // Toggle active class on button
+      button.classList.toggle('active');
+      
+      // Toggle faq-show class on accordion content
+      if (x.className.indexOf("faq-show") == -1) {
+        x.className += " faq-show";
+      } else { 
+        x.className = x.className.replace(" faq-show", "");
+      }
+    }
+</script>
       </div>
-      <footer>
-         <sinfooter-component></sinfooter-component>
+   <!-- FAQ CONTENT -->
+            <footer>
+               <sinfooter-component></sinfooter-component>
       </footer>
  </html>
