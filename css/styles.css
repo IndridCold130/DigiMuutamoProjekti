@@ -202,12 +202,13 @@ footer {
     background: #000000ea;
     border: 2px solid #777777;
     -webkit-border-radius: 4px;
-    border-radius: 4px;
+    border-radius: 6px;
     color: #fff;
     margin: 1em auto; /* Auto margin to center horizontally */
     width: 100%;
     max-width: 70%;
-    padding: 0.75em 1.25em;
+    padding: 1.75em 1.25em;
+    margin-top: 125px; /* Increase margin-top for smaller screens */
 }
 
 /* FAQ ELEMENTS */
@@ -216,6 +217,7 @@ footer {
   font-family: 'Caudex', serif;
   font-size: 24px;
   border:none;
+  border-radius: 6px;
   display:inline-block;
   padding:8px 16px;
   vertical-align:middle;
