@@ -148,3 +148,90 @@ customElements.define('faq-component', faq);
 // FAQ logic
 
 
+// GALLERY
+
+// Specify the path to your folder containing images
+const folderPath = 'Design/Screenshots/';
+
+// Function to generate gallery items
+function generateGalleryItems() {
+    const singalleryDiv = document.getElementById('singallery');
+
+    // Array of image filenames
+    const imageFilenames = [
+        'image1.jpg',
+        'image2.jpg',
+        'image3.jpg',
+        'image4.jpg'
+    ];
+
+    // Iterate through image filenames
+    imageFilenames.forEach((filename, index) => {
+        // Create gallery item container
+        const galleryItem = document.createElement('div');
+        galleryItem.classList.add('gallery-item');
+
+        // Create thumbnail image
+        const thumbnailImg = document.createElement('img');
+        thumbnailImg.src = folderPath + filename;
+        thumbnailImg.alt = `Image ${index + 1}`;
+        thumbnailImg.classList.add('thumbnail');
+
+        // Add click event listener to expand the image
+        thumbnailImg.addEventListener('click', function() {
+            expandImage(folderPath + filename);
+        });
+
+        // Append thumbnail image to gallery item
+        galleryItem.appendChild(thumbnailImg);
+
+        // Append gallery item to gallery container
+        singalleryDiv.appendChild(galleryItem);
+    });
+}
+
+// Function to expand image
+function expandImage(imageSrc) {
+    // Create overlay element
+    const overlay = document.createElement('div');
+    overlay.classList.add('overlay');
+
+    // Create expanded image element
+    const expandedImg = document.createElement('img');
+    expandedImg.src = imageSrc;
+    expandedImg.classList.add('expanded-image');
+
+    // Append expanded image to overlay
+    overlay.appendChild(expandedImg);
+
+    // Add click event listener to overlay to close expanded image
+    overlay.addEventListener('click', function() {
+        overlay.remove();
+    });
+
+    // Append overlay to body
+    document.body.appendChild(overlay);
+}
+
+// Call the function to generate gallery items
+document.addEventListener('DOMContentLoaded', function() {
+    generateGalleryItems();
+});
+
+// GALLERY
+class gallerycontent extends HTMLElement {
+  constructor() {
+    super();
+  }
+  connectedCallback() {
+    this.innerHTML = `
+    <script>
+    generateGalleryItems();
+    </script>
+`;
+    }
+  }
+
+// Define the custom element
+customElements.define('gallerycontent-component', gallerycontent);
+// gallery logic

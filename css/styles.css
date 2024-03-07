@@ -186,6 +186,12 @@ footer {
     cursor: pointer;
   }
 
+  .thumbnail {
+    width: 280; /* Adjust the width of the thumbnail */
+    height: 100; /* Adjust the height of the thumbnail */
+    /* Add any other styling for the thumbnails */
+}
+
   .gallery-display {
     display: block;
     transform-origin: top left;
@@ -270,7 +276,7 @@ footer {
     border-bottom: 5px solid transparent; /* Change to border-bottom */
     border-left: 5px solid #fff; /* Change to border-left */
     margin-right: 6px; /* Adjust spacing as needed */
-    transition: transform 0.1s; /* Add transition for smooth animation */
+    transition: transform 0.05s; /* Add transition for smooth animation */
   }
 
 .faq-btn.active .accordion-arrow {
@@ -278,3 +284,56 @@ footer {
 }
 /* FAQ ELEMENTS */
 
+/* BLOG ELEMENTS */
+
+.blog-container {
+  margin-left: 150px;
+  margin-right: 150px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.blog-card {
+  background-color: #000000;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(255, 0, 0, 0.1);
+  overflow: hidden;
+  width: 250px; /* Set your desired width */
+  height: 400px; /* Set your desired height */
+  border: 2px solid #777777;
+}
+
+.blog-card img {
+  margin-bottom: 150px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  border-radius: 4px 4px 0 0;
+}
+
+.blog-info {
+  padding: 20px;
+}
+
+.blog-info h2 {
+  margin-top: 10px;
+}
+
+.blog-info p {
+  margin-bottom: 20px;
+}
+
+.blog-info a {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.blog-info a:hover {
+  background-color: #0056b3;
+}
