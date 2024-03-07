@@ -8,7 +8,7 @@ class topnavbar extends HTMLElement {
         <style>
         body {
           margin: 0;
-          background-image: url('Design/Conspiracy.jpg');
+          background-image: url('Design/Background3.jpg');
           background-size: cover;
           display: flex;
           flex-direction: column;
@@ -235,3 +235,16 @@ class gallerycontent extends HTMLElement {
 // Define the custom element
 customElements.define('gallerycontent-component', gallerycontent);
 // gallery logic
+
+
+function openModal(imageSrc) {
+  var modal = document.getElementById('myModal');
+  var modalImg = document.getElementById('modalImg');
+  modal.style.display = "block";
+  modalImg.src = imageSrc;
+}
+
+function closeModal() {
+  var modal = document.getElementById('myModal');
+  modal.style.display = "none";
+}

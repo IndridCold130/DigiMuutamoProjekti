@@ -5,19 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/gallery.css">
     <script src="Java/main.js" type="text/javascript" defer></script>
     <style></style>
  </head>
  <main>
   <topnavbar-component></topnavbar-component>
  </main>
- <div class="quote-opaque">
-  <div id="singallery" class="quote-opaque">
+ 
+  <!-- INSIDE OPAQUE CONTAINER -->
+  <div class="quote-opaque">
+  <div class="gallery">
+    <!-- Image thumbnails -->
+    <img src="../Design/Screenshots/image1.jpg" alt="Image 1" onclick="openModal('image1.jpg')">
+    <img src="Design\Screenshots\image2.jpg" alt="Image 2" onclick="openModal('image2.jpg')">
+    <img src="Design\Screenshots\image3.jpg" alt="Image 2" onclick="openModal('image3.jpg')">
+    <img src="Design\Screenshots\image4.jpg" alt="Image 2" onclick="openModal('image4.jpg')">
+    <img src="Design\Screenshots\image5.jpg" alt="Image 2" onclick="openModal('image5.jpg')">
+    <img src="Design\Screenshots\image6.jpg" alt="Image 2" onclick="openModal('image6.jpg')">
+    <img src="Design\Screenshots\image7.jpg" alt="Image 2" onclick="openModal('image7.jpg')">
+    <img src="Design\Screenshots\image8.jpg" alt="Image 2" onclick="openModal('image8.jpg')">
+    <!-- Add more images as needed -->
   </div>
+  <!-- Modal container -->
+  <div id="myModal" class="modal">
+    <!-- Modal content (the image itself) -->
+    <img class="modal-content" id="img01">
   </div>
+  <script>
+    // Function to open the modal with the clicked image
+    function openModal(imgSrc) {
+        var modal = document.getElementById('myModal');
+        var modalImg = document.getElementById('img01');
+        modal.style.display = 'block';
+        modalImg.src = imgSrc;
+    }
+
+    // Close the modal when clicking outside the image
+    var modal = document.getElementById('myModal');
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+</script>
+
+<!-- INSIDE OPAQUE CONTAINER -->
+</div>
 <!-- FOOTER -->
 <footer>
   <sinfooter-component></sinfooter-component>
 </footer>
 <!-- FOOTER -->
  </html>
+
+<!-- Compare this snippet from index.html:  <div id="singallery" class="quote-opaque">
+  </div>
